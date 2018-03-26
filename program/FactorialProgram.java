@@ -6,21 +6,18 @@ import java.util.Scanner;
 
 public class FactorialProgram {
     public static BigInteger factorial(long num){        
-            /*int i = num;
-            int fact = 1;*/
-            BigInteger fact = BigInteger.ONE;
-        /*while (i > 1)
-	{
-        fact *= i;
-        i--;
+        BigInteger fact = BigInteger.ONE;
+        long c;        
+        c = num;
+        while (c > 1)
+        {
+        fact = fact.multiply(BigInteger.valueOf(c));
+        c--;
         
-        System.out.println(fact +" * "+ i +" = "+ fact*i);
+        System.out.println(fact +" * "+ c +" = "+ fact.multiply(BigInteger.valueOf(c)));
       	}
-            return fact;*/
-        for (long i = 2; i<= num; i++){
-        fact = fact.multiply(BigInteger.valueOf(i));
-        }
-        return fact;
+            return fact;
+        
     }
             
     public static void main(String[] args) {
